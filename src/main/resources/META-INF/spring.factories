@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+ru.alfastrah.library.log.aspect.starter.AspectLoggingAutoConfiguration
