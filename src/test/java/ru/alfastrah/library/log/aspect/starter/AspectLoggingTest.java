@@ -57,7 +57,7 @@ class AspectLoggingTest {
         String value2 = "value2";
 
         //when
-        testAspect.string(value1, value2);
+        String resultValue = testAspect.string(value1, value2);
 
         //then
         List<ILoggingEvent> logsList = listAppender.list;
@@ -72,7 +72,7 @@ class AspectLoggingTest {
         assertEquals(3, logsList.get(1).getArgumentArray().length);
         assertTrue(logsList.get(1).getArgumentArray()[2] instanceof String);
         method = (String) logsList.get(1).getArgumentArray()[2];
-        assertEquals(method, value1 + value2);
+        assertEquals(method, resultValue);
 
         assertEquals(logsList.get(0).getArgumentArray()[0], logsList.get(1).getArgumentArray()[0]);
     }

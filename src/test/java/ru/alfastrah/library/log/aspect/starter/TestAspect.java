@@ -2,7 +2,6 @@ package ru.alfastrah.library.log.aspect.starter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.alfastrah.library.log.aspect.lib.AspectLog;
 
 public class TestAspect {
     private static final Logger log = LoggerFactory.getLogger(TestAspect.class);
@@ -14,7 +13,7 @@ public class TestAspect {
 
     @AspectLog
     String string(String arg1, String arg2) {
-        return arg1 + arg2;
+        return arg1 + " " + arg2;
     }
 
     @AspectLog(useJsonMapper = true)
