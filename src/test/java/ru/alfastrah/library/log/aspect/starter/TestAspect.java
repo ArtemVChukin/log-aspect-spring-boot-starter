@@ -24,11 +24,18 @@ public class TestAspect {
     static class Holder {
         private String value;
 
-        Holder(String value) {
+        public Holder() {
+        }
+
+        public Holder(String value) {
             this.value = value;
         }
 
-        String getValue() {
+        public void setValue(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
             return value;
         }
     }
